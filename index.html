@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juan David Garzón Méndez | Portafolio</title>
+  <meta name="description" content="Portafolio de Juan David Garzón Méndez, estudiante de Ingeniería de Software en Neiva, Huila.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -21,6 +22,8 @@
       --color-secundario-oscuro: #E2E8F0;
       --color-bloque-oscuro: #1E293B;
       --color-acento-oscuro: #2DD4BF;
+      --color-acento-hover: #115E59;
+      --color-acento-hover-oscuro: #5EEAD4;
       --color-error-oscuro: #FCA5A5;
       --font-titulo: "Space Grotesk", sans-serif;
       --font-texto: "Inter", sans-serif;
@@ -31,7 +34,7 @@
 
   <header class="fixed top-0 left-0 z-50 w-full border-b border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3" aria-label="Principal">
-      <a href="#inicio" class="font-titulo text-xl font-bold text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">[LOGO] JD.dev</a>
+      <a href="#inicio" class="font-titulo text-xl font-bold text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">JD.dev</a>
 
       <div class="flex items-center gap-2 md:order-last">
         <button id="boton-tema" type="button" aria-label="Cambiar entre modo claro y oscuro" class="rounded-lg border border-secundario/40 px-3 py-2 text-sm transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:border-secundario-oscuro/40 dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">Modo</button>
@@ -43,7 +46,7 @@
           <li><a href="#sobre-mi" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Sobre mí</a></li>
           <li><a href="#proyectos" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Proyectos</a></li>
           <li><a href="#preguntas" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Preguntas</a></li>
-          <li><a href="#contacto" class="inline-block rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Contáctame</a></li>
+          <li><a href="#contacto" class="inline-block rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Contáctame</a></li>
         </ul>
       </div>
     </nav>
@@ -54,9 +57,9 @@
     <section id="inicio" class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 md:grid-cols-2 lg:py-24">
       <div>
         <h1 class="font-titulo text-4xl font-bold md:text-5xl">Hola, soy Juan David Garzón Méndez</h1>
-        <p class="mt-4 text-base leading-relaxed">Estudiante de Ingeniería de Software en la Fundación Escuela Tecnológica de Neiva (FET). [SUBTÍTULO]</p>
+        <p class="mt-4 text-base leading-relaxed">Estudiante de Ingeniería de Software en la Fundación Escuela Tecnológica de Neiva (FET).</p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-          <a href="#proyectos" class="rounded-lg bg-acento px-6 py-3 text-center font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Ver proyectos</a>
+          <a href="#proyectos" class="rounded-lg bg-acento px-6 py-3 text-center font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Ver proyectos</a>
           <a href="#contacto" class="rounded-lg border-2 border-acento px-6 py-3 text-center font-medium text-acento transition hover:bg-acento/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:border-acento-oscuro dark:text-acento-oscuro dark:focus-visible:ring-acento-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Contáctame</a>
         </div>
       </div>
@@ -65,16 +68,16 @@
 
     <section id="sobre-mi" class="scroll-mt-16 bg-secundario/5 py-16 dark:bg-bloque-oscuro">
       <div class="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="Persona programando en un computador portátil con una taza de café al lado" class="h-64 w-full rounded-xl object-cover shadow-lg md:h-80">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" loading="lazy" alt="Persona programando en un computador portátil con una taza de café al lado" class="h-64 w-full rounded-xl object-cover shadow-lg md:h-80">
         <div>
           <h2 class="font-titulo text-3xl font-semibold">Sobre mí</h2>
-          <p class="mt-4 text-base leading-relaxed">Soy estudiante de Ingeniería de Software en Neiva, Huila, Colombia. [DESCRIPCIÓN SOBRE MÍ]</p>
+          <p class="mt-4 text-base leading-relaxed">Soy estudiante de Ingeniería de Software de cuarto semestre en Neiva, Huila, Colombia.</p>
           <h3 class="mt-6 font-titulo text-xl font-semibold">Habilidades</h3>
           <ul class="mt-3 flex flex-wrap gap-2">
-            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[HABILIDAD 1]</li>
-            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[HABILIDAD 2]</li>
-            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[HABILIDAD 3]</li>
-            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[HABILIDAD 4]</li>
+            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Python</li>
+            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">JavaScript</li>
+            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">HTML</li>
+            <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">CSS</li>
           </ul>
         </div>
       </div>
@@ -85,41 +88,44 @@
       <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
         <article class="overflow-hidden rounded-xl border border-secundario/20 bg-dominante shadow transition hover:-translate-y-1 hover:shadow-xl dark:border-secundario-oscuro/20 dark:bg-bloque-oscuro">
-          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Pantalla con código de un proyecto de software" class="h-48 w-full object-cover">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Pantalla con código de un proyecto de software" class="h-48 w-full object-cover">
           <div class="p-5">
-            <h3 class="font-titulo text-xl font-semibold">[PROYECTO 1]</h3>
-            <p class="mt-2 text-base leading-relaxed">[DESCRIPCIÓN CORTA]</p>
+            <h3 class="font-titulo text-xl font-semibold">Sistema de contabilidad</h3>
+            <p class="mt-2 text-base leading-relaxed">Sistema realizado con diversas tecnologías de desarrollo, incluyendo Java, Spring Boot y MySQL.</p>
             <ul class="mt-3 flex flex-wrap gap-2">
-              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[TECNOLOGÍA 1]</li>
-              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[TECNOLOGÍA 2]</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Java</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Spring Boot</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">MySQL</li>
             </ul>
-            <button type="button" data-nombre="[PROYECTO 1]" data-detalle="[DESCRIPCIÓN DETALLADA] [AÑO]" class="ver-detalle mt-4 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Ver detalle</button>
+            <button type="button" data-nombre="Sistema de contabilidad" data-detalle="Sistema realizado con diversas tecnologías de desarrollo, incluyendo Java, Spring Boot y MySQL. Año: 2023" class="ver-detalle mt-4 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Ver detalle</button>
           </div>
         </article>
 
         <article class="overflow-hidden rounded-xl border border-secundario/20 bg-dominante shadow transition hover:-translate-y-1 hover:shadow-xl dark:border-secundario-oscuro/20 dark:bg-bloque-oscuro">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Código fuente de un programa en un editor oscuro" class="h-48 w-full object-cover">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Código fuente de un programa en un editor oscuro" class="h-48 w-full object-cover">
           <div class="p-5">
-            <h3 class="font-titulo text-xl font-semibold">[PROYECTO 2]</h3>
-            <p class="mt-2 text-base leading-relaxed">[DESCRIPCIÓN CORTA]</p>
+            <h3 class="font-titulo text-xl font-semibold">Sistema de gestión de tareas</h3>
+            <p class="mt-2 text-base leading-relaxed">Sistema de gestión de tareas para mejorar la productividad y organización.</p>
             <ul class="mt-3 flex flex-wrap gap-2">
-              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[TECNOLOGÍA 1]</li>
-              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[TECNOLOGÍA 2]</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Java</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Spring Boot</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">MySQL</li>
             </ul>
-            <button type="button" data-nombre="[PROYECTO 2]" data-detalle="[DESCRIPCIÓN DETALLADA] [AÑO]" class="ver-detalle mt-4 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Ver detalle</button>
+            <button type="button" data-nombre="Sistema de gestión de tareas" data-detalle="Sistema de gestión de tareas para mejorar la productividad y organización. Año: 2023" class="ver-detalle mt-4 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Ver detalle</button>
           </div>
         </article>
 
         <article class="overflow-hidden rounded-xl border border-secundario/20 bg-dominante shadow transition hover:-translate-y-1 hover:shadow-xl dark:border-secundario-oscuro/20 dark:bg-bloque-oscuro">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Equipo de personas trabajando con computadores portátiles en una mesa" class="h-48 w-full object-cover">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Equipo de personas trabajando con computadores portátiles en una mesa" class="h-48 w-full object-cover">
           <div class="p-5">
-            <h3 class="font-titulo text-xl font-semibold">[PROYECTO 3]</h3>
-            <p class="mt-2 text-base leading-relaxed">[DESCRIPCIÓN CORTA]</p>
+            <h3 class="font-titulo text-xl font-semibold">Sistema de gestión de inventario</h3>
+            <p class="mt-2 text-base leading-relaxed">Sistema de gestión de inventario para controlar y optimizar los productos disponibles.</p>
             <ul class="mt-3 flex flex-wrap gap-2">
-              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[TECNOLOGÍA 1]</li>
-              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">[TECNOLOGÍA 2]</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Java</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">Spring Boot</li>
+              <li class="rounded-full bg-acento/10 px-3 py-1 text-sm text-acento dark:bg-acento-oscuro/10 dark:text-acento-oscuro">MySQL</li>
             </ul>
-            <button type="button" data-nombre="[PROYECTO 3]" data-detalle="[DESCRIPCIÓN DETALLADA] [AÑO]" class="ver-detalle mt-4 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Ver detalle</button>
+            <button type="button" data-nombre="Sistema de gestión de inventario" data-detalle="Sistema de gestión de inventario para controlar y optimizar los productos disponibles. Año: 2023" class="ver-detalle mt-4 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Ver detalle</button>
           </div>
         </article>
 
@@ -129,7 +135,7 @@
     <dialog id="modal" aria-labelledby="modal-titulo" class="m-auto w-[90%] max-w-md rounded-xl bg-dominante p-6 text-secundario backdrop:bg-black/60 dark:bg-bloque-oscuro dark:text-secundario-oscuro">
       <h3 id="modal-titulo" class="font-titulo text-xl font-semibold"></h3>
       <p id="modal-detalle" class="mt-3 text-base leading-relaxed"></p>
-      <button id="cerrar-modal" type="button" class="mt-6 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Cerrar</button>
+      <button id="cerrar-modal" type="button" class="mt-6 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Cerrar</button>
     </dialog>
 
     <section id="preguntas" class="scroll-mt-16 bg-secundario/5 py-16 dark:bg-bloque-oscuro">
@@ -138,23 +144,23 @@
         <div class="mt-8 flex flex-col gap-3">
 
           <div class="rounded-lg border border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
-            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">[PREGUNTA 1]<span aria-hidden="true">+</span></button>
-            <p class="hidden px-4 pb-4 text-base leading-relaxed">[RESPUESTA 1]</p>
+            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">¿Qué estudias actualmente?<span aria-hidden="true">+</span></button>
+            <p class="hidden px-4 pb-4 text-base leading-relaxed">Estudio Ingeniería de Software en la Fundación Escuela Tecnológica de Neiva (FET), en Neiva, Huila, y voy en cuarto semestre.</p>
           </div>
 
           <div class="rounded-lg border border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
-            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">[PREGUNTA 2]<span aria-hidden="true">+</span></button>
-            <p class="hidden px-4 pb-4 text-base leading-relaxed">[RESPUESTA 2]</p>
+            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">¿Con qué tecnologías trabajas?<span aria-hidden="true">+</span></button>
+            <p class="hidden px-4 pb-4 text-base leading-relaxed">Trabajo con Python, JavaScript, HTML y CSS, y en mis proyectos he usado Java, Spring Boot y MySQL.</p>
           </div>
 
           <div class="rounded-lg border border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
-            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">[PREGUNTA 3]<span aria-hidden="true">+</span></button>
-            <p class="hidden px-4 pb-4 text-base leading-relaxed">[RESPUESTA 3]</p>
+            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">¿Cómo puedo contactarte?<span aria-hidden="true">+</span></button>
+            <p class="hidden px-4 pb-4 text-base leading-relaxed">Puedes escribirme desde el formulario de esta página o al correo juanme@fet.edu.co.</p>
           </div>
 
           <div class="rounded-lg border border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
-            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">[PREGUNTA 4]<span aria-hidden="true">+</span></button>
-            <p class="hidden px-4 pb-4 text-base leading-relaxed">[RESPUESTA 4]</p>
+            <button type="button" aria-expanded="false" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">¿Dónde estás ubicado?<span aria-hidden="true">+</span></button>
+            <p class="hidden px-4 pb-4 text-base leading-relaxed">Estoy en Neiva, Huila, Colombia.</p>
           </div>
 
         </div>
@@ -169,28 +175,28 @@
         <div>
           <label for="nombre" class="font-medium">Nombre</label>
           <input id="nombre" type="text" aria-describedby="error-nombre" class="mt-1 w-full rounded-lg border border-secundario/50 bg-dominante px-3 py-2 text-secundario focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:border-secundario-oscuro/50 dark:bg-dominante-oscuro dark:text-secundario-oscuro dark:focus-visible:ring-acento-oscuro">
-          <p id="error-nombre" class="mt-1 text-sm text-error dark:text-error-oscuro"></p>
+          <p id="error-nombre" class="mt-1 text-sm text-error dark:text-error-oscuro" aria-live="polite"></p>
         </div>
 
         <div>
           <label for="correo" class="font-medium">Correo</label>
           <input id="correo" type="email" aria-describedby="error-correo" class="mt-1 w-full rounded-lg border border-secundario/50 bg-dominante px-3 py-2 text-secundario focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:border-secundario-oscuro/50 dark:bg-dominante-oscuro dark:text-secundario-oscuro dark:focus-visible:ring-acento-oscuro">
-          <p id="error-correo" class="mt-1 text-sm text-error dark:text-error-oscuro"></p>
+          <p id="error-correo" class="mt-1 text-sm text-error dark:text-error-oscuro" aria-live="polite"></p>
         </div>
 
         <div>
           <label for="asunto" class="font-medium">Asunto</label>
           <input id="asunto" type="text" aria-describedby="error-asunto" class="mt-1 w-full rounded-lg border border-secundario/50 bg-dominante px-3 py-2 text-secundario focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:border-secundario-oscuro/50 dark:bg-dominante-oscuro dark:text-secundario-oscuro dark:focus-visible:ring-acento-oscuro">
-          <p id="error-asunto" class="mt-1 text-sm text-error dark:text-error-oscuro"></p>
+          <p id="error-asunto" class="mt-1 text-sm text-error dark:text-error-oscuro" aria-live="polite"></p>
         </div>
 
         <div>
           <label for="mensaje" class="font-medium">Mensaje</label>
           <textarea id="mensaje" rows="5" aria-describedby="error-mensaje" class="mt-1 w-full rounded-lg border border-secundario/50 bg-dominante px-3 py-2 text-secundario focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:border-secundario-oscuro/50 dark:bg-dominante-oscuro dark:text-secundario-oscuro dark:focus-visible:ring-acento-oscuro"></textarea>
-          <p id="error-mensaje" class="mt-1 text-sm text-error dark:text-error-oscuro"></p>
+          <p id="error-mensaje" class="mt-1 text-sm text-error dark:text-error-oscuro" aria-live="polite"></p>
         </div>
 
-        <button type="submit" class="rounded-lg bg-acento px-6 py-3 font-medium text-dominante transition hover:bg-acento/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante sm:w-fit dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Enviar mensaje</button>
+        <button type="submit" class="rounded-lg bg-acento px-6 py-3 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante sm:w-fit dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Enviar mensaje</button>
       </form>
     </section>
 
@@ -200,8 +206,8 @@
 
   <footer class="bg-secundario py-10 text-dominante dark:bg-bloque-oscuro dark:text-secundario-oscuro">
     <div class="mx-auto grid max-w-6xl gap-4 px-4 text-sm sm:grid-cols-2 lg:grid-cols-4">
-      <p>Correo: <a href="mailto:[CORREO]" class="underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dominante dark:focus-visible:ring-acento-oscuro">[CORREO]</a></p>
-      <p><a href="[GITHUB]" class="underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dominante dark:focus-visible:ring-acento-oscuro">GitHub</a> · <a href="[LINKEDIN]" class="underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dominante dark:focus-visible:ring-acento-oscuro">LinkedIn</a></p>
+      <p>Correo: <a href="mailto:juanme@fet.edu.co" class="underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dominante dark:focus-visible:ring-acento-oscuro">juanme@fet.edu.co</a></p>
+      <p><a href="https://github.com/JuanDavidGarzonMendez" target="_blank" rel="noopener" class="underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dominante dark:focus-visible:ring-acento-oscuro">GitHub</a></p>
       <p>Neiva, Huila, Colombia</p>
       <p>© <span id="anio"></span> Juan David Garzón Méndez. Todos los derechos reservados.</p>
     </div>
@@ -269,6 +275,7 @@
         }
 
         document.getElementById('error-' + id).textContent = error;
+        document.getElementById(id).setAttribute('aria-invalid', error !== '');
         if (error !== '') {
           todoBien = false;
         }
