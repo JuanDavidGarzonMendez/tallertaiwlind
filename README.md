@@ -85,7 +85,7 @@ Jerarquía: H1 `text-4xl md:text-5xl font-bold`, H2 `text-3xl font-semibold`, H3
 
 ## Bitácora de prompts
 
-**Versión 1:** prompt maestro con las cinco partes (rol, contexto, tareas, restricciones y formato de salida) enviado a la herramienta de IA **[HERRAMIENTA DE IA]**, que entregó el archivo `index.html` inicial.
+**Versión 1:** prompt maestro con las cinco partes (rol, contexto, tareas, restricciones y formato de salida) enviado a la herramienta de IA , que entregó el archivo `index.html` inicial.
 
 Prompts de ajuste enviados a Claude (Anthropic) el 22 de octubre de 2026:
 
