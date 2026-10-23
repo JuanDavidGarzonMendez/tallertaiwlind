@@ -29,6 +29,7 @@ El sitio presenta quién soy, mis proyectos y una forma de contactarme. Está di
 | Sobre mí | Texto, imagen y lista de habilidades |
 | Proyectos | Tarjetas en grid (1 columna en celular, 2 en tablet y 3 en computador) con efecto hover |
 | Modal | Ventana con el detalle de cada proyecto (etiqueta `<dialog>`, se cierra con el botón, con Escape o al hacer clic fuera) |
+| Formación | Tarjetas con mi formación académica |
 | Preguntas frecuentes | Acordeón de 4 preguntas |
 | Contacto | Formulario con validación de campos obligatorios y de correo, mensajes de error junto al campo y toast de confirmación que desaparece a los 4 segundos |
 | Pie de página | Correo, GitHub, ubicación y derechos reservados |
@@ -85,7 +86,44 @@ Jerarquía: H1 `text-4xl md:text-5xl font-bold`, H2 `text-3xl font-semibold`, H3
 
 ## Bitácora de prompts
 
-**Versión 1:** prompt maestro con las cinco partes (rol, contexto, tareas, restricciones y formato de salida) enviado a la herramienta de IA , que entregó el archivo `index.html` inicial.
+**Versión 1:** prompt maestro con las cinco partes (rol, contexto, tareas, restricciones y formato de salida), enviado a la herramienta de IA, que entregó el archivo `index.html` inicial.
+
+<details>
+<summary>Prompt maestro completo (ver texto)</summary>
+
+**ROL:**
+Actúa como desarrollador frontend senior especializado en Tailwind CSS 4, diseño responsive, accesibilidad web (WCAG AA) y JavaScript puro. Además, eres mentor de estudiantes de Ingeniería de Software: escribes código sencillo, corto y fácil de entender, porque el estudiante debe poder explicar cada línea en un video.
+
+**CONTEXTO:**
+Voy a crear mi portafolio personal como desarrollador de software. Soy Juan David Garzón Méndez, estudiante de Ingeniería de Software de la Fundación Escuela Tecnológica de Neiva (FET), en Neiva, Huila, Colombia. El público objetivo son reclutadores, empresas locales y docentes que quieren conocer mis proyectos y contactarme. El objetivo del sitio es presentar quién soy, mostrar mis proyectos y recibir mensajes por medio de un formulario de contacto. El tono es profesional pero cercano. No conoces mis datos reales: usa marcadores entre corchetes como [PROYECTO 1], [DESCRIPCIÓN], [CORREO] o [AÑO] y NO inventes empresas, logros, cifras ni tecnologías que no te haya dado.
+
+**TAREAS:**
+Construye una página de una sola página (landing) con estas secciones, en este orden:
+1. Navbar fija con logo en texto, enlaces a cada sección, botón de modo claro/oscuro y botón "Contáctame". En celular se convierte en menú hamburguesa que se abre y se cierra con JavaScript, y también se cierra al hacer clic en un enlace. El botón hamburguesa debe actualizar aria-expanded.
+2. Hero con título principal, subtítulo, una imagen o ilustración y dos botones: "Ver proyectos" y "Contáctame".
+3. Sección "Sobre mí" con texto e imagen en dos columnas (una columna en celular) y una lista corta de habilidades [HABILIDADES].
+4. Proyectos en tarjetas con grid de 1 columna en celular, 2 en tablet y 3 en computador. Cada tarjeta lleva imagen, nombre, descripción corta, etiquetas de tecnologías, efecto hover y un botón "Ver detalle" que abre un modal con más información del proyecto (componente extra). El modal debe usar la etiqueta `<dialog>`, cerrarse con un botón y con la tecla Escape.
+5. Preguntas frecuentes en acordeón (4 preguntas) que se abren y se cierran con JavaScript, con aria-expanded en cada botón.
+6. Formulario de contacto con nombre, correo, asunto y mensaje. Cada campo tiene su label. Valida con JavaScript que los campos obligatorios estén llenos y que el correo sea válido; muestra el error en rojo debajo de cada campo y, al enviar correctamente, un toast verde de confirmación (con role="status") que desaparece a los 4 segundos y limpia el formulario.
+7. Pie de página con correo [CORREO], enlaces a [GITHUB] y [LINKEDIN], ubicación (Neiva, Huila) y derechos reservados con el año.
+
+Agrega un botón para cambiar entre modo claro y modo oscuro usando la variante dark de Tailwind.
+
+**RESTRICCIONES:**
+- Tecnologías: solo HTML, Tailwind CSS 4 mediante el Play CDN (https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4) y JavaScript puro, sin otras librerías ni frameworks.
+- Tema: define la paleta con @theme dentro de una etiqueta `<style type="text/tailwindcss">` siguiendo la regla 60-30-10: dominante #F8FAFC para fondos (60 %), secundario #1E293B para textos y bloques (30 %) y acento #0F766E para botones y detalles (10 %). Colores semánticos: éxito #15803D, error #B91C1C y advertencia #B45309. Nombra los colores en español (por ejemplo bg-dominante, text-secundario, bg-acento, text-error) y úsalos en todo el sitio en lugar de colores sueltos.
+- Modo oscuro: en la misma etiqueta de estilo agrega @custom-variant dark (&:where(.dark, .dark *)); y alterna la clase "dark" en document.documentElement con el botón. En modo oscuro conserva la proporción 60-30-10 con colores oscuros equivalentes.
+- Tipografía: máximo dos fuentes de Google Fonts, Space Grotesk para títulos e Inter para textos, definidas con @theme (font-titulo y font-texto). Jerarquía clara: H1 text-4xl md:text-5xl font-bold, H2 text-3xl font-semibold, H3 text-xl font-semibold, párrafos text-base leading-relaxed y textos pequeños text-sm.
+- Responsive: diseño mobile-first y uso de al menos los prefijos sm:, md: y lg:. Debe verse bien en celular, tablet y computador.
+- Accesibilidad: texto alternativo descriptivo en todas las imágenes, contraste mínimo de 4.5:1 en texto normal (también en modo oscuro), etiquetas en todos los campos, foco visible con focus-visible:ring en botones, enlaces y campos (nunca quites el contorno sin reemplazarlo), HTML semántico (header, nav, main, section, footer) y un solo H1.
+- Estados: hover y focus visibles en botones, enlaces y tarjetas, con transiciones suaves.
+- Código: sencillo, lo más corto posible y SIN COMENTARIOS, escrito como lo haría un estudiante: nombres de variables y funciones en español, const y function, addEventListener, sin patrones avanzados ni clases de JavaScript. No construyas nombres de clase de Tailwind dinámicamente. Usa solo clases que existan en Tailwind 4; si dudas de una clase, usa otra más simple.
+- No inventes datos: usa los marcadores entre corchetes que te indiqué.
+
+**FORMATO DE SALIDA:**
+Entrega un único archivo index.html completo, con el `<style type="text/tailwindcss">` en el head, el código indentado y el JavaScript al final del body, sin comentarios. Usa imágenes de ejemplo de un banco gratuito (por ejemplo Unsplash) con su alt. Después del código, agrega una lista corta (máximo 6 puntos) que explique cómo abrir el archivo y qué marcadores debo reemplazar. No agregues introducción ni despedida.
+
+</details>
 
 Prompts de ajuste enviados a Claude (Anthropic) el 22 de octubre de 2026:
 
@@ -133,9 +171,11 @@ Todos los ajustes se probaron abriendo el sitio y comprobando cada interacción 
 
 ## Revisión y pruebas
 
-- **Responsive:** probado en celular, tablet y computador con las herramientas de desarrollador del navegador (F12).
-- **Validador HTML (validator.w3.org):** [RESULTADO]
-- **Lighthouse (accesibilidad):** [PUNTAJE] sobre el sitio publicado.
+- **Responsive:** probado en celular, tablet y computador con las herramientas de desarrollador del navegador.
+- **Validador HTML (validator.w3.org):** 3 errores y 0 advertencias. Los 3 errores vienen del uso del Play CDN de Tailwind CSS 4: el validador no reconoce `type="text/tailwindcss"` en la etiqueta `<style>` ni las reglas `@theme` y `@custom-variant`. El taller exige este método, y en un proyecto real se evitarían compilando el CSS con Tailwind CLI. Se corrigió la advertencia de encabezado vacío en el modal, que ahora trae un texto inicial.
+- **Lighthouse (accesibilidad):** 96/100 sobre el sitio publicado, en modo móvil (22 de octubre de 2026). Supera el mínimo de 90 que exige el taller.
+
+![Resultado de Lighthouse: 96 en accesibilidad](lighthouse.png)
 
 ## Cómo ejecutarlo
 
