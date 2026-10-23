@@ -29,9 +29,18 @@
       --font-texto: "Inter", sans-serif;
     }
   </style>
+  <script>
+    // Aplica el modo oscuro guardado antes de pintar la página
+    try {
+      if (localStorage.getItem('tema') === 'oscuro') {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body class="bg-dominante text-secundario font-texto dark:bg-dominante-oscuro dark:text-secundario-oscuro">
 
+  <!-- ENCABEZADO / NAVBAR -->
   <header class="fixed top-0 left-0 z-50 w-full border-b border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3" aria-label="Principal">
       <a href="#inicio" class="font-titulo text-xl font-bold text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">JD.dev</a>
@@ -45,6 +54,7 @@
         <ul class="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
           <li><a href="#sobre-mi" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Sobre mí</a></li>
           <li><a href="#proyectos" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Proyectos</a></li>
+          <li><a href="#formacion" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Formación</a></li>
           <li><a href="#preguntas" class="hover:text-acento hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:text-acento-oscuro dark:focus-visible:ring-acento-oscuro">Preguntas</a></li>
           <li><a href="#contacto" class="inline-block rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-dominante-oscuro">Contáctame</a></li>
         </ul>
@@ -54,6 +64,7 @@
 
   <main class="pt-16">
 
+    <!-- HÉROE -->
     <section id="inicio" class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 md:grid-cols-2 lg:py-24">
       <div>
         <h1 class="font-titulo text-4xl font-bold md:text-5xl">Hola, soy Juan David Garzón Méndez</h1>
@@ -66,6 +77,7 @@
       <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" width="900" height="600" alt="Computador portátil con código de programación en la pantalla sobre un escritorio" class="h-64 w-full rounded-xl object-cover shadow-lg md:h-80">
     </section>
 
+    <!-- SOBRE MÍ -->
     <section id="sobre-mi" class="scroll-mt-16 bg-secundario/5 py-16 dark:bg-bloque-oscuro">
       <div class="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2">
         <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" width="900" height="600" loading="lazy" alt="Persona programando en un computador portátil con una taza de café al lado" class="h-64 w-full rounded-xl object-cover shadow-lg md:h-80">
@@ -83,6 +95,7 @@
       </div>
     </section>
 
+    <!-- PROYECTOS -->
     <section id="proyectos" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-16">
       <h2 class="font-titulo text-3xl font-semibold">Proyectos</h2>
       <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -132,12 +145,36 @@
       </div>
     </section>
 
-    <dialog id="modal" aria-labelledby="modal-titulo" class="m-auto w-[90%] max-w-md rounded-xl bg-dominante p-6 text-secundario backdrop:bg-black/60 dark:bg-bloque-oscuro dark:text-secundario-oscuro">
-      <h3 id="modal-titulo" class="font-titulo text-xl font-semibold"></h3>
-      <p id="modal-detalle" class="mt-3 text-base leading-relaxed"></p>
-      <button id="cerrar-modal" type="button" class="mt-6 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Cerrar</button>
+    <!-- FORMACIÓN (cambio manual 3) -->
+    <section id="formacion" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-16">
+      <h2 class="font-titulo text-3xl font-semibold">Formación</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+
+        <article class="rounded-xl border border-secundario/20 bg-dominante p-5 shadow transition hover:-translate-y-1 hover:shadow-xl dark:border-secundario-oscuro/20 dark:bg-bloque-oscuro">
+          <h3 class="font-titulo text-xl font-semibold">Ingeniería de Software</h3>
+          <p class="mt-1 text-sm">Fundación Escuela Tecnológica de Neiva (FET) · Neiva, Huila</p>
+          <p class="mt-3 text-base leading-relaxed">Cuarto semestre, en curso. Formación profesional en desarrollo de software.</p>
+        </article>
+
+        <article class="rounded-xl border border-secundario/20 bg-dominante p-5 shadow transition hover:-translate-y-1 hover:shadow-xl dark:border-secundario-oscuro/20 dark:bg-bloque-oscuro">
+          <h3 class="font-titulo text-xl font-semibold">Gestión de Software Ágil Asistido por IA</h3>
+          <p class="mt-1 text-sm">Seminario · FET</p>
+          <p class="mt-3 text-base leading-relaxed">Desarrollo frontend con Tailwind CSS 4 y uso de inteligencia artificial como asistente de programación.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MODAL DE DETALLE DE PROYECTO -->
+    <dialog id="modal" aria-labelledby="modal-titulo" class="m-auto w-[90%] max-w-md rounded-xl bg-dominante p-0 text-secundario backdrop:bg-black/60 dark:bg-bloque-oscuro dark:text-secundario-oscuro">
+      <div class="p-6">
+        <h3 id="modal-titulo" class="font-titulo text-xl font-semibold"></h3>
+        <p id="modal-detalle" class="mt-3 text-base leading-relaxed"></p>
+        <button id="cerrar-modal" type="button" class="mt-6 rounded-lg bg-acento px-4 py-2 font-medium text-dominante transition hover:bg-acento-hover dark:hover:bg-acento-hover-oscuro focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secundario focus-visible:ring-offset-2 focus-visible:ring-offset-dominante dark:bg-acento-oscuro dark:text-dominante-oscuro dark:focus-visible:ring-secundario-oscuro dark:focus-visible:ring-offset-bloque-oscuro">Cerrar</button>
+      </div>
     </dialog>
 
+    <!-- PREGUNTAS FRECUENTES -->
     <section id="preguntas" class="scroll-mt-16 bg-secundario/5 py-16 dark:bg-bloque-oscuro">
       <div class="mx-auto max-w-3xl px-4">
         <h2 class="font-titulo text-3xl font-semibold">Preguntas frecuentes</h2>
@@ -145,7 +182,7 @@
 
           <div class="rounded-lg border border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
             <button type="button" aria-expanded="false" aria-controls="respuesta-1" class="pregunta flex w-full items-center justify-between rounded-lg p-4 text-left font-medium transition hover:bg-secundario/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acento dark:hover:bg-secundario-oscuro/10 dark:focus-visible:ring-acento-oscuro">¿Qué estudias actualmente?<span aria-hidden="true">+</span></button>
-            <p id="respuesta-1" class="hidden px-4 pb-4 text-base leading-relaxed">Estudio Ingeniería de Software en la Fundación Escuela Tecnológica de Neiva (FET), en Neiva, Huila, y voy en cuarto semestre.</p>
+            <p id="respuesta-1" class="hidden px-4 pb-4 text-base leading-relaxed">Hola, soy Juan, tengo 22 años y estudio Ingeniería de Software en la Fundación Escuela Tecnológica de Neiva (FET), en Neiva, Huila. Voy en cuarto semestre y me estoy formando para adquirir experiencia en muchas más tecnologías.</p>
           </div>
 
           <div class="rounded-lg border border-secundario/20 bg-dominante dark:border-secundario-oscuro/20 dark:bg-dominante-oscuro">
@@ -167,6 +204,7 @@
       </div>
     </section>
 
+    <!-- CONTACTO -->
     <section id="contacto" class="mx-auto max-w-3xl scroll-mt-16 px-4 py-16">
       <h2 class="font-titulo text-3xl font-semibold">Contáctame</h2>
       <p class="mt-2 text-base leading-relaxed">Escríbeme y te responderé lo antes posible.</p>
@@ -202,8 +240,10 @@
 
   </main>
 
+  <!-- TOAST DE CONFIRMACIÓN -->
   <div id="toast" role="status" class="fixed right-4 bottom-4 left-4 hidden rounded-lg bg-exito px-4 py-3 text-center text-white shadow-lg sm:left-auto">Mensaje enviado correctamente.</div>
 
+  <!-- PIE DE PÁGINA -->
   <footer class="bg-secundario py-10 text-dominante dark:bg-bloque-oscuro dark:text-secundario-oscuro">
     <div class="mx-auto grid max-w-6xl gap-4 px-4 text-sm sm:grid-cols-2 lg:grid-cols-4">
       <p>Correo: <a href="mailto:juanme@fet.edu.co" class="underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dominante dark:focus-visible:ring-acento-oscuro">juanme@fet.edu.co</a></p>
@@ -224,33 +264,40 @@
 
     document.getElementById('anio').textContent = new Date().getFullYear();
 
+    // Modo oscuro: alterna la clase y guarda la preferencia (cambio manual 2)
     botonTema.addEventListener('click', function () {
-      document.documentElement.classList.toggle('dark');
+      const oscuro = document.documentElement.classList.toggle('dark');
+      try {
+        localStorage.setItem('tema', oscuro ? 'oscuro' : 'claro');
+      } catch (e) {}
     });
 
-    botonMenu.addEventListener('click', function () {
-      menu.classList.toggle('hidden');
-      const abierto = !menu.classList.contains('hidden');
+    // Menú hamburguesa
+    function actualizarMenu(abierto) {
+      menu.classList.toggle('hidden', !abierto);
       botonMenu.setAttribute('aria-expanded', abierto);
       botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
-    });
+    }
 
-    document.addEventListener('keydown', function (evento) {
-      if (evento.key === 'Escape' && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden');
-        botonMenu.setAttribute('aria-expanded', 'false');
-        botonMenu.setAttribute('aria-label', 'Abrir menú');
-      }
+    botonMenu.addEventListener('click', function () {
+      actualizarMenu(menu.classList.contains('hidden'));
     });
 
     menu.querySelectorAll('a').forEach(function (enlace) {
       enlace.addEventListener('click', function () {
-        menu.classList.add('hidden');
-        botonMenu.setAttribute('aria-expanded', 'false');
-        botonMenu.setAttribute('aria-label', 'Abrir menú');
+        actualizarMenu(false);
       });
     });
 
+    // Escape cierra el menú móvil
+    document.addEventListener('keydown', function (evento) {
+      if (evento.key === 'Escape' && !menu.classList.contains('hidden')) {
+        actualizarMenu(false);
+        botonMenu.focus();
+      }
+    });
+
+    // Modal de detalle
     document.querySelectorAll('.ver-detalle').forEach(function (boton) {
       boton.addEventListener('click', function () {
         document.getElementById('modal-titulo').textContent = boton.dataset.nombre;
@@ -263,21 +310,25 @@
       modal.close();
     });
 
+    // Clic fuera de la caja cierra el modal (un clic dentro no lo cierra)
     modal.addEventListener('click', function (evento) {
-      const caja = modal.getBoundingClientRect();
-      if (evento.clientX < caja.left || evento.clientX > caja.right || evento.clientY < caja.top || evento.clientY > caja.bottom) {
+      if (evento.target === modal) {
         modal.close();
       }
     });
 
+    // Acordeón: muestra "+" o "−" según el estado (cambio manual 1)
     document.querySelectorAll('.pregunta').forEach(function (boton) {
       boton.addEventListener('click', function () {
-        const respuesta = boton.nextElementSibling;
+        const respuesta = document.getElementById(boton.getAttribute('aria-controls'));
         respuesta.classList.toggle('hidden');
-        boton.setAttribute('aria-expanded', !respuesta.classList.contains('hidden'));
+        const abierto = !respuesta.classList.contains('hidden');
+        boton.setAttribute('aria-expanded', abierto);
+        boton.querySelector('span').textContent = abierto ? '−' : '+';
       });
     });
 
+    // Formulario: validación y toast
     formulario.addEventListener('submit', function (evento) {
       evento.preventDefault();
       let todoBien = true;
